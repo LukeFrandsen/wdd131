@@ -41,7 +41,7 @@ h2::after {
     text-align: center;
     border: 1px solid lightgray;
 }
-.logo {
+#logo {
     margin-top: 30px;
     max-width: 150px
     
@@ -62,3 +62,6 @@ body {
     background-color: black;
     color: white;
 }
+.dark h2 {
+    color: #A0D4ED;
+    }
