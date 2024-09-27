@@ -6,5 +6,6 @@ themeSelect.addEventListener('change', function() {
     }
     else {
         body.classList.remove('dark');
+        logo.src = 'byui-logo_blue.webp';
     }
 });
