@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design with Waves</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6EC1E4;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Wave effect at the bottom of header */
+        .wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg') repeat-x;
+            background-size: contain;
+            z-index: 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .main {
+            flex: 3;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #E4F1FE;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Wave effect at the top of footer */
+        footer .wave {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg') repeat-x;
+            background-size: contain;
+        }
+
+        footer p {
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Media query for screens smaller than 768px (tablets) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Media query for screens smaller than 480px (mobile phones) */
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 10px;
+            }
+
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+
+            .main {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 20px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Wavey Responsive Web Design</h1>
+        <div class="wave"></div>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+            <h2>Main Content Area</h2>
+            <p>This is the main content of the page. The layout will adjust according to the screen size. On smaller screens, the sidebar will be hidden to save space. Resize your browser window to see how it responds!</p>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>The sidebar content will remain visible on larger screens but will disappear on mobile devices.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wave"></div>
+        <p>Footer &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
