@@ -1,0 +1,155 @@
+/* Importing Mooli font */
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--secondary-font), var(--primary-font);
+    font-size: 18px; /* Increased base font size */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Headline Styles */
+h1 {
+    font-family: var(--secondary-font), sans-serif;
+    color: var(--text-light); /* Light color to stand out against dark header */
+    font-size: 2rem;
+    text-align: center;
+
+}
+h2 {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+/* Link Styles */
+a {
+    color: var(--primary-color); /* Primary color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for visibility */
+}
+a:link,
+a:visited {
+    color: var(--accent-color); /* Accent color for unvisited and visited links */
+    text-decoration: none; /* Remove underline */
+}
+a:active {
+    color: var(--primary-color); /* Change color when link is clicked */
+}
+
+/* Header and Footer Styles */
+header, footer {
+    background-color: var(--primary-color); /* Dark background (black) */
+    color: var(--text-light); /* Light text for contrast */
+    padding: 10px 0;
+    text-align: center;
+}
+header {
+    display: block;
+}
+footer a {
+    color: var(--text-light); /* Footer links to match the text color */
+}
+
+footer a:hover {
+    color: var(--accent-color); /* Slight color change on hover */
+}
+
+/* Image Styles */
+img {
+    width: 250px; /* Set width */
+    height: 250px; /* Set height */
+    object-fit: cover; /* Crop image to fit square without distortion */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main Content */
+main {
+    padding: 15px;
+    text-align: center; /* Center images on small screens */
+}
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Space between the images */
+    padding: 15px;
+}
+
+figure {
+    margin: 0;
+    padding: 10px 0;
+}
+@media screen and (max-width: 1200px) {
+    section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+/* Menu Button Styles */
+#menu-button {
+    display: none; /* Hide the menu button by default */
+}
+@media screen and (max-width: 1200px) {
+    #menu-button {
+        display: block;
+        background: none; /* Remove default background */
+        border: none; /* Remove default border */
+        color: var(--text-light); /* Light color to stand out against dark header */
+        font-size: 1.5rem; /* Adjust font size */
+        cursor: pointer; /* Change cursor to pointer */
+        padding: 10px; /* Add some padding */
+        text-transform: uppercase; /* Make the text uppercase */
+        font-family: var(--secondary-font), sans-serif; /* Use the same headline font */
+        margin: 10px auto 0 auto;
+    }
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+    }
+    #nav-menu.show {
+        display: flex;
+    }
+    
+}
+@media screen and (min-width: 1201px) {
+   header {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+   }
+    #nav-menu {
+            display: flex;
+            justify-content: center;
+            
+    }
+    #menu-button {
+        display: none;
+    }
+    
+}
+#menu-button:hover {
+    color: var(--secondary-color); /* Change color on hover to primary */
+}
