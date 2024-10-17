@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); 
+
+:root {
+    --gold-color: #EFC69B;
+    --red-color: #AF1B3F;
+    --dark-color: #473144;
+    --body-font: 'Helvetica', 'Arial', sans-serif;
+    --headline-font: 'Lora', 'Impact', serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dark-color);
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+header {
+    padding: 20px 0;
+}
+header h1 {
+    font-family: var(--headline-font);
+    font-size: 2.5em;
+    color: var(--dark-color);
+    text-align: center;
+}
+.main-nav {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: end;
+    list-style: none;
+    color: var(--dark-color);
+    padding: 0.5em 0;
+    text-align: center;
+    border-bottom: 2px solid var(--gold-color);
+    border-top: 2px solid var(--gold-color);;
+}
+.main-nav li {
+    text-align: center;
+}
+.main-nav li a {
+    color: var(--dark-color);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.main-nav li a:hover {
+    color: var(--red-color); 
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px 0;
+    align-items: start;
+}
+.book-info {
+    text-align: left;
+    font-size: 1.2rem;
+}
+.book-info p {
+    margin: 10px 0;
+}
+.book-description {
+    text-align: center;
+}
+.book-description h2 {
+    font-family: var(--headline-font);
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+.book-image img{
+    width: 200px;
+    height: 300px;
+    background-color: #ddd;
+    margin: 0 auto 20px;
+}
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.filters label {
+    display: block;
+    font-size: 1.2rem;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+}
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Stacking the columns on smaller screens */
+    }
+
+    .book-details,
+    .book-meta,
+    .filters {
+        text-align: center; /* Center-align content on small screens */
+    }
+}
