@@ -27,11 +27,6 @@ body {
 }
 header {
     padding: 20px 0;
-    /* position: fixed; /* Fixes the header to the top 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; */
     
 }
 header h1 {
