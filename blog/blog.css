@@ -12,7 +12,11 @@
     margin: 0;
     padding: 0;
 }
-
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container fills the viewport */
+}
 body {
     font-family: var(--body-font);
     font-size: 16px;
@@ -23,6 +27,12 @@ body {
 }
 header {
     padding: 20px 0;
+    /* position: fixed; /* Fixes the header to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; */
+    
 }
 header h1 {
     font-family: var(--headline-font);
@@ -59,6 +69,7 @@ main {
     gap: 20px;
     padding: 20px 0;
     align-items: start;
+    flex: 1;
 }
 .book-info {
     text-align: left;
@@ -122,4 +133,15 @@ select {
 /* Bring the link back on focus */
 .skiptocontent a:focus {
     top: 0;              /* Move it back on-screen */
+}
+footer {
+    position: fixed; /* Fixes the footer to the bottom */
+    left: 0;
+    right: 0; /* Stretches the footer across the width */
+    background-color: var(--gold-color); /* Optional: give footer a background color */
+    color: var(--dark-color);
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0; /* Sticks to the bottom of the viewport */
+    z-index: 1000; /
 }
