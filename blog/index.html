@@ -9,39 +9,47 @@
     <link rel="stylesheet" href="blog.css">
     <script src="blog.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
+
     <header>
-        <div class="skiptocontent">
-            <a href="#maincontent">skip to main content</a>
-          </div>
         <h1>Kids Read For Fun</h1>
-        <nav>
-            <ul class="main-nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#Archive">Archive</a></li>
-                <li><a href="#Search">Search</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="maincontent">
-            <section class="book-info">
-                <p>July 5, 2022</p>
-                <p>10-14</p>
-                <p>Fantasy</p>
-                <p>stars/rating</p>
-            </section>
-
-            <section class="book-description">
-                <h2>The Alchemyst</h2>
-                <div class="book-image">
-                    <img src="images/The Alchemyst.avif" alt="The Alchemyst">
-                </div>
-                <p>While working at pleasant but mundane summer jobs in San Francisco, fifteen-year-old twins, Sophie and Josh, suddenly find themselves caught up in the deadly, centuries-old struggle between rival alchemists, Nicholas Flamel and John Dee, over the possession of an ancient and powerful book holding the secret formulas ...</p>
-            </section>
+        <div class="skiptocontent">
+            <a href="#main">skip to main content</a>
+        </div>
         
+        <div id="nav-div">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Archive">Archive</a></li>
+                    <li><a href="#Search">Search</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <aside class="filters">
+    <main id="main">
+        <section id="gridbook">
+            <div class="itemBook">
+
+                <div class="metaBook">
+                    <p class="date">July 5, 2022</p>
+                    <p class="age">10-14</p>
+                    <p class="genre">Fantasy</p>
+                    <p class="stars">stars/rating</p>
+                </div>
+
+                <div class="mainBook">
+                    <h3>The Alchemyst</h3>
+                    <img src="images/The Alchemyst.avif" alt="The Alchemyst">
+                    <p>While working at pleasant but mundane summer jobs in San Francisco, fifteen-year-old twins, Sophie and Josh, suddenly find themselves caught up in the deadly, centuries-old struggle between rival alchemists, Nicholas Flamel and John Dee, over the possession of an ancient and powerful book holding the secret formulas ...</p>
+                </div>
+
+            </div>
+        </section>
+
+        <aside id="filters">
             <label>Sort:
                 <select><option value="">Option 1</option></select>
             </label>
@@ -55,11 +63,10 @@
                 <select><option value="">Option 1</option></select>
             </label>
         </aside>
-        </section>
+        
     </main>
     <footer>
         <p>&copy; 2022 Kids Read For Fun</p>
     </footer>
-    </div>
 </body>
 </html>

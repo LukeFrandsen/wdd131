@@ -23,5 +23,53 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		'A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his "Aunt Pol" and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.',
+		imgSrc:
+		'https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg',
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
-]
+];
+
+const gridBookSection = document.querySelector('#gridbook');
+
+// Loop through the articles array
+articles.forEach((book) => {
+    // Create a div element for the book
+    const itemBookDiv = document.createElement('div');
+    itemBookDiv.classList.add('itemBook');
+    
+    // Create the metaBook section
+    const metaBookDiv = document.createElement('div');
+    metaBookDiv.classList.add('metaBook');
+    metaBookDiv.innerHTML = `
+        <p class="date">${book.date}</p>
+        <p class="age">${book.ages}</p>
+        <p class="genre">${book.genre}</p>
+        <p class="stars">${book.stars}</p>
+    `;
+    
+    // Create the mainBook section
+    const mainBookDiv = document.createElement('div');
+    mainBookDiv.classList.add('mainBook');
+    mainBookDiv.innerHTML = `
+        <h3>${book.title}</h3>
+        <img src="${book.imgSrc}" alt="${book.imgAlt}">
+        <p>${book.description}</p>
+    `;
+    
+    // Append metaBook and mainBook to itemBookDiv
+    itemBookDiv.appendChild(metaBookDiv);
+    itemBookDiv.appendChild(mainBookDiv);
+    
+    // Append itemBookDiv to the gridbook section
+    gridBookSection.appendChild(itemBookDiv);
+});
