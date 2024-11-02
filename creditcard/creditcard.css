@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: white;
+    font-family: monospace;
+  }
+
+  .credit-card-container {
+    width: 450px;
+    position: relative;
+    padding: 20px;
+  }
+
+  .card-front {
+    background-color: #e5e5e5;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-back {
+    background-color: #e5e5e5;
+    padding: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .total {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .card-image {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 25px;
+    background-color: #ff9966;
+    border-radius: 4px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .card-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .expiration {
+    display: flex;
+    gap: 10px;
+  }
+
+  .expiration input {
+    width: 60px;
+  }
+
+  .cvc-container {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .cvc-container input {
+    width: 80px;
+  }
+
+  button {
+    width: 100px;
+    padding: 10px;
+    background: #e5e5e5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: monospace;
+    margin-top: 80px;
+    position: relative;
+    z-index: 3;
+  }
