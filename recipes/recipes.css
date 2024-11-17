@@ -10,58 +10,157 @@
 
     header {
         display: flex;
-        color: var(--text-dark);
-        padding: 1rem;
-        text-align: center;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-
-    }
-    header img {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    form {
-        position: relative;
-        width: 100%;
-    }
-    #search {
-        margin: 1rem auto;
-        width: 98%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    button {
-        position: absolute;
-        right: 1;
-    }
-    .recipe-block {
-        padding: 1rem;
-        margin: 1rem;
-        border: 2px solid black;
-    }
-    .recipe {
-        display: flex;
-        
-        width: 100%;
-    }
-    .recipe img {
-        display: flex;
-        justify-content: flex-start;
+        padding: 20px;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
     }
     
-   .footer{
-        width: 100%;
-        height: 40px;
+    header #logo img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+    header h1 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 28px;
+        margin: 0;
+    }
+    form {
         display: flex;
         justify-content: center;
-        align-items: center;
-
+        margin: 20px 10px;
+        width: 90%;
     }
-    .social img {
-        height: 50px;
-        margin: 0 auto;
+    
+    form input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        font-size: 16px;
+    }
+    
+    form button {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-left: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 0 4px 4px 0;
+    }
+    .search-icon {
+        height: 20px;  
+    }
+    .recipe-block {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 20px auto;
+        width: 90%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        overflow: hidden;
+        padding: 20px;
+    }
+    
+    .recipe-block img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .recipe-details {
+        padding: 20px;
+    }
+    
+    .recipe-details .tag {
+        display: inline-block;
+        background-color: #ddd;
+        color: #555;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 3px 6px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .recipe-details h2 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: #2a7ae2;
+    }
+    
+    .recipe-details .rating {
+        color: #f4c430;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .recipe-details p {
+        font-size: 14px;
+        color: #555;
+    }
+    
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+    }
+    
+    footer .social {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    footer .social img {
+        width: 30px;
+    }
+
+    @media (min-width: 768px) {
+        header {
+            flex-direction: row;
+            justify-content: start;
+            padding: 10px 20px;
+        }
+    
+        header #logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+    
+        header h1 {
+            font-size: 24px;
+        }
+    
+        form {
+            margin: 20px auto;
+            width: 50%;
+        }
+    
+        .recipe-block {
+            display: flex;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+    
+        .recipe-block img {
+            width: 40%;
+            object-fit: cover;
+        }
+    
+        .recipe-details {
+            text-align: left;
+            padding: 20px;
+            width: 60%;
+        }
+    
+        footer .social {
+            justify-content: start;
+        }
     }
