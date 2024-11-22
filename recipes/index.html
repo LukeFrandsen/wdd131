@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recipes">
-    <meta name="Author" content="Luke Frandsen">
+    <meta property="og:title" content="Recipe">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A website with all your favorite recipes">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Recipes</title>
     <link rel="stylesheet" href="recipes.css">
     <script src="recipes.mjs" defer></script>
-    <script src="main.js" defer></script>
+    <script type="module" src="main.js" defer></script>
 
 </head>
 <body>
@@ -17,23 +21,23 @@
             <img src="images/recipe-book.png" alt="logo">
         </div>
         <h1>RecipeBook</h1>
+        
     </header>
+    <form>
+        <input id="search" type="text" placeholder="Find a Recipe">
+        <button type="submit"><img class="search-icon"src="images/search.svg" alt="search-icon"></button>
+    </form>
     <main>
-        <form>
-                <input id="search" type="text" placeholder="Find a Recipe">
-                <button type="submit"><img class="search-icon"src="images/search.svg" alt="search-icon"></button>
-        </form>
-            <div class="recipe-block">
-                <img src="./images/sweet-potato-waffle-md.jpg" alt="Recipe Image">
-                <div class="recipe-details">
-                    <span class="tag">dessert</span>
-                    <h2>Sweet Potato Waffle</h2>
-                    <div class="rating">
-                        ⭐⭐⭐⭐☆
-                    </div>
-                    <p>Savory waffles made with Sweet potato with a hint of Ginger</p>
-                </div>
+        
+        <div class="recipe-block">
+            <img src="${image}" alt="${name}">
+            <div class="recipe-details">
+                ${generateTagsMarkup(tags)}
+                <h2>${name}</h2>
+                ${generateRatingStars(rating)}
+                <p>${description}</p>
             </div>
+        </div>
 
         
             <!-- <div class="recipe-container">
