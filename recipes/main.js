@@ -32,7 +32,7 @@ function generateRatingStars(rating) {
 }
 
 function generateRecipeTemplate(recipes) {
-    const { name, tags, rating, image, description } = recipes;
+    const { name, tags, rating, image="./images/default-image.jpg", description } = recipes;
 
     return `
         <div class="recipe-block">
